@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails event_scheduler: development" uuid="831e8a18-2e13-4a65-b6bc-43d87faef92e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails event_scheduler: test" uuid="39aef86a-f1da-4f74-9240-973e3e8deb5d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails event_scheduler: production" uuid="4fcb701d-27a5-4b1c-b0bf-bcc774df96ca">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
