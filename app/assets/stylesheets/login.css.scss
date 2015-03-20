@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.45;
+  opacity: 0.75;
   z-index: -1;
 }
 
@@ -21,24 +21,26 @@ body {
 h1 {
   font-family: "FontAwesome";
   font-size: 38pt;
-  color: darkblue;
-  text-shadow: 0 2px lightblue, 1 2px blue;
+  color: white;
+  text-shadow: 1px 1px 1px darkblue;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  width: 40%;
+  width: 45%;
   text-align: center;
 }
 
 .login_form {
   font-family: "Inconsolata";
-  background-color: whitesmoke;
+  background-color: #ffffff;
   margin-top: 7%;
   margin-left: auto;
   margin-right: auto;
   width: 25%;
-  opacity: 0.75;
-  padding: 25px 20px 75px 20px;
+  min-width: 20em;
+  opacity: 0.85;
+  padding: 10px 10px 65px 10px;
+  border: solid darkgreen 5px;
 }
 
 .login_row {
@@ -49,20 +51,24 @@ h1 {
 }
 
 .info_box {
-  background-color: lightblue;
+  background-color: #d9edf7;
+  border: solid deepskyblue 1px;
   margin-bottom: 10%;
+  margin-top: 3%;
   font-size: 12pt;
-  color: darkblue;
-  padding: 10px 10px 30px;
-  text-align: justify;
+  color: #3a87ad;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
 }
 
 #username, #password {
-  width: 100%;
+  width: 68%;
   margin-left: auto;
   margin-right: auto;
   height: 25px;
-  font-size: 14pt;
+  font-size: 10pt;
+  line-height: 15px;
+  font-family: sans-serif;
 }
 
 #username input{
@@ -70,12 +76,22 @@ h1 {
 }
 
 #login-submit {
-  height: 40px;
-  width: 75px;
-  background-color: skyblue;
-  border: none;
-  font-size: 14pt;
-  font-family: "Inconsolata";
+  height: 28px;
+  width: 80px;
+  background-color: #428bca;
+  font-size: 12pt;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  line-height: 25px;
+  box-sizing: border-box;
+  border: dotted #428bca 1px;
+  font-family: benton-sans-serif;
   float: right;
   margin-top: 5%;
+}
+
+.fa
+{
+  margin-right: 5px;
 }

@@ -1,15 +1,16 @@
 <head>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 <h1>Event Scheduler</h1>
 <div id="background">
 </div>
 <form class="login_form">
-  <div class="login_row info_box" id="message">Please enter your username and password in the boxes below</div>
+  <div class="login_row info_box" id="message"><p>Please login or sign up</p></div>
   <div class="login_row">Username <input type="text" id="username" placeholder="Enter your username" ></div><br>
   <div class="login_row">Password <input type="password" id="password" placeholder="Enter your password" ></div><br>
-  <div class="login_row"><button id="login-submit" value="Login" onclick=submitForm()>Submit</button></div>
+  <div class="login_row"><button id="login-submit" value="Login" onclick=submitForm()><i class="fa fa-sign-in"></i>Submit</button></div>
   <script type="text/javascript">function submitForm() {document.getElementById("message").innerHTML = "User not found"}</script>
 </form>
 </body>
