@@ -20,11 +20,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'angular-rails'
+  gem 'jquery-rails'
+  gem 'font-awesome-sass'
+  gem 'bootstrap-sass-rails', '~> 3.0.0.3'
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
-
-gem 'jquery-rails'
-gem 'font-awesome-sass'
-gem 'bootstrap-sass-rails', '~> 3.0.0.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
