@@ -3,14 +3,46 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>Event Scheduler</h1>
+<h1>Event<br>Scheduler
+  <h4>by Manduo</h4><br>
+</h1>
 <div id="background">
 </div>
-<form class="login_form">
-  <div class="login_row info_box" id="message"><p>Please login or sign up</p></div>
-  <div class="login_row">Username <input type="text" id="username" placeholder="Enter your username" ></div><br>
-  <div class="login_row">Password <input type="password" id="password" placeholder="Enter your password" ></div><br>
-  <div class="login_row"><button id="login-submit" value="Login" onclick=submitForm()><i class="fa fa-sign-in"></i>Submit</button></div>
-  <script type="text/javascript">function submitForm() {document.getElementById("message").innerHTML = "User not found"}</script>
+<div class="login_container">
+<form class="login_form" ng-controller="LoginCtrl" name="login" ng-model="login" novalidate>
+  <div class="login_row info_box" id="message"><p>{{infoText}}</p></div>
+  <div class="login_row_group">
+    <div class="login_row" ng-hide="passwordReset"><input type="text" id="username" ng-minlength="5" ng-model="username" name="username" placeholder=" Username:" required="true" ></div>
+    <div class="error_container" ng-show="login.username.$dirty && createAccountFlag">
+        <small class="small" ng-show="login.username.$error.required"><i class="fa fa-exclamation-triangle"> Username is required</i></small>
+        <small class="small" ng-show="login.username.$error.minlength"><i class="fa fa-exclamation-triangle"> Username must have at least 5 characters</i></small>
+    </div>
+    <br ng-hide="passwordReset">
+    <div class="login_row" ng-hide="passwordReset"><input type="password" id="password" ng-minlength="8" name="password" ng-model="password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/" placeholder=" Password:" required="true"></div>
+    <div class="error_container" ng-show="login.password.$dirty && createAccountFlag">
+        <small class="small" ng-show="login.password.$error.required"><i class="fa fa-exclamation-triangle"> Password is required</i></small>
+        <small class="small" ng-show="login.password.$error.minlength"><i class="fa fa-exclamation-triangle"> Password must have at least 8 characters</i></small>
+        <small class="small" ng-show="login.password.$error.pattern"><i class="fa fa-exclamation-triangle"> Password must contain at least a number, a capital letter and a small letter</i></small>
+    </div>
+    <br>
+    <div class="login_row" ng-show="createAccountFlag && !passwordReset"><input type="password" ng-minlength="8" ng-model="password2" name="password2" id="password2" placeholder=" Confirm Password:" ></div>
+    <div class="error_container" ng-show="login.password2.$dirty && createAccountFlag">
+      <small class="small" ng-show="login.password2.$error.required"><i class="fa fa-exclamation-triangle"> Confirm Password is required</i></small>
+      <small class="small" ng-show="password != password2"><i class="fa fa-exclamation-triangle"> Passwords do not match</i></small>
+    </div>
+    <br ng-show="createAccountFlag">
+    <div class="login_row" ng-show="createAccountFlag || passwordReset" ><input type="email" id="email" name="email" ng-model="email" placeholder=" Email:" required="true"></div>
+    <div class="error_container" ng-show="login.email.$dirty && (createAccountFlag || passwordReset)">
+      <small class="small" ng-show="login.email.$error.required"><i class="fa fa-exclamation-triangle"> Email is required</i></small>
+      <small class="small" ng-show="login.email.$error.email"><i class="fa fa-exclamation-triangle"> Not a valid email</i></small>
+    </div>
+    <br>
+  </div>
+  <hr>
+  <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="#" ng-click="createAccount()">Create an account</a></i></div>
+  <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="" ng-click="resetPassword()">Forgot password</a></i></div>
+  <div class="create_account" ng-show="createAccountFlag || passwordReset"><i class="fa fa-angle-double-left"><a href="" ng-click="backToLogin()">Login</a></i></div>
+  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
 </form>
+</div>
 </body>

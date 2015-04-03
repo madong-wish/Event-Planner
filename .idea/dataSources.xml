@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails event_scheduler: development" uuid="831e8a18-2e13-4a65-b6bc-43d87faef92e">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/postgres</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails event_scheduler: test" uuid="39aef86a-f1da-4f74-9240-973e3e8deb5d">

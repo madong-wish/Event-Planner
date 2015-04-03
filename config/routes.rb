@@ -1,4 +1,6 @@
 EventScheduler::Application.routes.draw do
+  root to: 'login#index'
+
   resources :overview
   resources :login
   # The priority is based upon order of creation:
