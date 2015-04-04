@@ -20,6 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'angular-rails'
+  gem 'angular-rails-templates'
   gem 'jquery-rails'
   gem 'font-awesome-sass'
   gem 'bootstrap-sass-rails', '~> 3.0.0.3'
