@@ -24,7 +24,7 @@
         <small class="small" ng-show="login.password.$error.minlength"><i class="fa fa-exclamation-triangle"> Password must have at least 8 characters</i></small>
         <small class="small" ng-show="login.password.$error.pattern"><i class="fa fa-exclamation-triangle"> Password must contain at least a number, a capital letter and a small letter</i></small>
     </div>
-    <br>
+    <br ng-hide="passwordReset">
     <div class="login_row" ng-show="createAccountFlag && !passwordReset"><input type="password" ng-minlength="8" ng-model="password2" name="password2" id="password2" placeholder=" Confirm Password:" ></div>
     <div class="error_container" ng-show="login.password2.$dirty && createAccountFlag">
       <small class="small" ng-show="login.password2.$error.required"><i class="fa fa-exclamation-triangle"> Confirm Password is required</i></small>
@@ -36,13 +36,13 @@
       <small class="small" ng-show="login.email.$error.required"><i class="fa fa-exclamation-triangle"> Email is required</i></small>
       <small class="small" ng-show="login.email.$error.email"><i class="fa fa-exclamation-triangle"> Not a valid email</i></small>
     </div>
-    <br>
+    <br ng-show="createAccountFlag || passwordReset">
   </div>
   <hr>
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="#" ng-click="createAccount()">Create an account</a></i></div>
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="" ng-click="resetPassword()">Forgot password</a></i></div>
   <div class="create_account" ng-show="createAccountFlag || passwordReset"><i class="fa fa-angle-double-left"><a href="" ng-click="backToLogin()">Login</a></i></div>
-  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
+  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag || (login.email.$invalid && passwordReset)"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
 </form>
 </div>
 </body>

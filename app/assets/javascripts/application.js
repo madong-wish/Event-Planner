@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require angular
 //= require angular/lib/angular.min
 
 //= require angular/lib/angular-resource.min

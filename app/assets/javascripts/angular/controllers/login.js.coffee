@@ -22,4 +22,4 @@
   $scope.submitForm = () ->
     if $scope.passwordReset
       $scope.backToLogin()
-      $scope.infoText = 'An email will be sent to you with password reset link'
+      $scope.infoText = 'An email has been sent to you with password reset link'

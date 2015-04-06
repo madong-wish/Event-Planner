@@ -22,12 +22,12 @@ body {
 h1 {
   font-family: "Verdana";
   font-weight: normal;
-  font-size: 28pt;
+  font-size: 24pt;
   color: white;
   text-shadow: 1px 1px 1px darkblue;
   width: 45%;
   text-align: left;
-  margin: 2% auto 3% 3%;
+  margin: 2% auto 2% 2%;
 }
 
 h4 {
@@ -38,7 +38,7 @@ h4 {
   text-shadow: 1px 1px 1px darkblue;
   width: auto;
   text-align: left;
-  margin: 5% auto auto 5%;
+  margin: 2% auto auto 2%;
 }
 
 .login_form {
@@ -77,6 +77,8 @@ h4 {
   font-size: 12pt;
   color: #d9edf7;
   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .create_account {
@@ -120,8 +122,9 @@ h4 {
 }
 
 #login-submit:hover:enabled {
-  background-color: skyblue;
-  color: darkblue;
+  background-color: #0dca9f;
+  color: #fbfbfb;
+  border-color: green;
 }
 
 .fa
