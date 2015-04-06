@@ -10,20 +10,20 @@ EventScheduler::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = false
+  config.assets.compress = true
   #config.assets.js_compressor = Uglifier.new(mangle:false)
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
-  config.assets.precompile =  ['*.js', '*.css', '*.css.erb', '*.coffee']
+  config.assets.compile = false
+  #config.assets.precompile =  ['*.js', '*.css', '*.css.erb', '*.coffee']
 
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.version = '1.0'
+  #config.assets.version = '1.0'
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -65,7 +65,7 @@ EventScheduler::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.assets.js_compressor = Uglifier.new(mangle: false)
+  #config.assets.js_compressor = Uglifier.new(mangle: false)
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
