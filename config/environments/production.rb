@@ -1,6 +1,7 @@
 EventScheduler::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.eager_load = true
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -12,10 +13,10 @@ EventScheduler::Application.configure do
   config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
-  config.assets.js_compressor = Uglifier.new(mangle:false)
+  config.assets.compress = false
+  #config.assets.js_compressor = Uglifier.new(mangle:false)
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
