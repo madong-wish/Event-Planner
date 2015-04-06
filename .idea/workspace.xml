@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e499458d-a7fd-4232-a44a-3277508b8d7c" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/.npmignore" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/.npmignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/cryptiles/.npmignore" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/cryptiles/.npmignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/.npmignore" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/.npmignore" />
@@ -13,7 +14,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-json/node_modules/deep-extend/README.md" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-json/node_modules/deep-extend/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/README.md" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/update-notifier/node_modules/latest-version/node_modules/package-json/node_modules/registry-url/node_modules/rc/node_modules/deep-extend/README.md" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/update-notifier/node_modules/latest-version/node_modules/package-json/node_modules/registry-url/node_modules/rc/node_modules/deep-extend/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/lib/escape.js" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/lib/escape.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/test/escaper.js" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/test/escaper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/bower/node_modules/bower-registry-client/node_modules/request/node_modules/hawk/node_modules/hoek/lib/index.js" />
@@ -53,9 +53,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/event_scheduler@Production__event_scheduler.coverage" NAME="Production: event_scheduler Coverage Results" MODIFIED="1428296559881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
+    <SUITE FILE_PATH="coverage/event_scheduler@Production__event_scheduler.coverage" NAME="Production: event_scheduler Coverage Results" MODIFIED="1428299029102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
     <SUITE FILE_PATH="coverage/event_scheduler@IRB_console__event_scheduler.coverage" NAME="IRB console: event_scheduler Coverage Results" MODIFIED="1424138961668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
-    <SUITE FILE_PATH="coverage/event_scheduler@Development__event_scheduler.coverage" NAME="Development: event_scheduler Coverage Results" MODIFIED="1428298690769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
+    <SUITE FILE_PATH="coverage/event_scheduler@Development__event_scheduler.coverage" NAME="Development: event_scheduler Coverage Results" MODIFIED="1428298788250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -69,16 +69,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -149,11 +139,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34383956" vertical-offset="0" max-vertical-offset="630">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
               <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73846155" vertical-offset="0" max-vertical-offset="330">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -203,6 +203,7 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       </list>
     </option>
   </component>
@@ -600,6 +601,28 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -623,7 +646,7 @@
       <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: event_scheduler">
+  <component name="RunManager" selected="Rails.Production: event_scheduler">
     <configuration default="false" name="IRB console: event_scheduler" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="event_scheduler" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -923,7 +946,11 @@
       <created>1428297978507</created>
       <updated>1428297978507</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="production env">
+      <created>1428298743313</created>
+      <updated>1428298743313</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -941,8 +968,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24606581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24606581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1180,14 +1207,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/overview.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
@@ -1361,8 +1380,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34383956" vertical-offset="0" max-vertical-offset="630">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73846155" vertical-offset="0" max-vertical-offset="330">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
