@@ -1,4 +1,7 @@
 EventScheduler::Application.routes.draw do
+  resources :logins
+
+
   root to: 'login#index'
 
   resources :overview

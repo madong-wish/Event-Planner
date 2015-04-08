@@ -23,3 +23,7 @@
     if $scope.passwordReset
       $scope.backToLogin()
       $scope.infoText = 'An email has been sent to you with password reset link'
+    else if $scope.createAccountFlag
+      alert('Sign up feature is temporarily disabled by Mando. Please contact system admin to resolve this problem.')
+    else
+      $scope.infoText = 'User does not exist!'

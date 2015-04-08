@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require_tree .
+//= require angular
 //= require angular/lib/angular.min
 
 //= require angular/lib/angular-resource.min
 //= require angular/lib/angularjs-rails-resource.min
-
-//= require_tree .
+//= require angular/lib/angular-filter.min
