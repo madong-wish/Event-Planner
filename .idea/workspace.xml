@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e499458d-a7fd-4232-a44a-3277508b8d7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/tahoe.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/event_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/events.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/events_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/events_helper_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="event_scheduler.iws" />
@@ -21,7 +17,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/event_scheduler@Production__event_scheduler.coverage" NAME="Production: event_scheduler Coverage Results" MODIFIED="1428299029102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
-    <SUITE FILE_PATH="coverage/event_scheduler@assets_precompile__event_scheduler.coverage" NAME="assets:precompile: event_scheduler Coverage Results" MODIFIED="1429588094849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
+    <SUITE FILE_PATH="coverage/event_scheduler@assets_precompile__event_scheduler.coverage" NAME="assets:precompile: event_scheduler Coverage Results" MODIFIED="1429600753026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
     <SUITE FILE_PATH="coverage/event_scheduler@db_create__event_scheduler.coverage" NAME="db:create: event_scheduler Coverage Results" MODIFIED="1428570590472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
     <SUITE FILE_PATH="coverage/event_scheduler@assets_clean__event_scheduler.coverage" NAME="assets:clean: event_scheduler Coverage Results" MODIFIED="1429579474366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
     <SUITE FILE_PATH="coverage/event_scheduler@db_migrate__event_scheduler.coverage" NAME="db:migrate: event_scheduler Coverage Results" MODIFIED="1428570605286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="event_scheduler" />
@@ -81,8 +77,8 @@
             <file leaf-file-name="overview.js.coffee" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/overview.js.coffee">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.23653089" vertical-offset="0" max-vertical-offset="761">
-                    <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+                    <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
                     <folding />
                   </state>
                 </provider>
@@ -1269,7 +1265,11 @@
       <created>1429588308918</created>
       <updated>1429588308918</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="supplement items">
+      <created>1429600560517</created>
+      <updated>1429600560517</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1343,7 +1343,8 @@
     <MESSAGE value="production env" />
     <MESSAGE value="finish login page" />
     <MESSAGE value="Connected login backend with rails api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected login backend with rails api" />
+    <MESSAGE value="supplement items" />
+    <option name="LAST_COMMIT_MESSAGE" value="supplement items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1662,14 +1663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/overview.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23653089" vertical-offset="0" max-vertical-offset="761">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/overview.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.2" vertical-offset="0" max-vertical-offset="2835">
@@ -1714,6 +1707,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="481">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/overview.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
           <folding />
         </state>
       </provider>
