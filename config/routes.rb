@@ -1,4 +1,5 @@
 EventScheduler::Application.routes.draw do
+  resources :events
   resources :overview
   resources :login
 
@@ -30,6 +31,7 @@ EventScheduler::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  get 'events', to: 'events#index'
 
   # Sample resource route with sub-resources:
   #   resources :products do

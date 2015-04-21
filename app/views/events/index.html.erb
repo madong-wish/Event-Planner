@@ -1,0 +1,37 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<a href="/"><button id="logout-submit"><i class="fa fa-sign-out"></i>Sign Out</button></a>
+<h2>Welcome {{username}}</h2>
+<div class="event_container" ng-show="add_event_flag">
+<form class="event_form">
+  <h4 class="event_title">{{new_event_title}}</h4>
+  <div class="">
+     <div class="col-md-6">
+       <p>Date</p>
+       <input type="date" id="event_date">
+     </div>
+     <div class="col-md-6">
+       <p>Time</p>
+       <input type="time" id="event_time">
+     </div>
+  </div>
+  <div class="col-md-12">
+    <p>Location</p>
+    <input type="text" id="event_location">
+  </div>
+  <br>
+  <div class="col-md-12">
+    <p>Description</p>
+    <textarea id="event_description" type="text"></textarea>
+  </div>
+  <button id="event_cancel" ng-click="cancelEvent()"><i class="fa fa-times"></i>Cancel</button>
+  <button id="event_submit"><i class="fa fa-check"></i>Create</button>
+</form>
+</div>
+<div id="overview_background">
+</div>
+</body>

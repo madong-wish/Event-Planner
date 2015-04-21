@@ -1,16 +1,23 @@
 app = angular.module("Login", ["ngResource"])
 
 app.factory "User", ($resource) ->
-  $resource("/users/:id", {id: "@id"},
+  $resource("/users/:action/:id", {id: "@id"},
     {
-      'create': { method: 'POST'},
-      'index': { method: 'GET', isArray: true},
-      'show': { method: 'GET', isArray: false},
-      'destroy': { method: 'DELETE'}
+      create: { method: 'POST'},
+      index: { method: 'GET', isArray: true},
+      destroy: { method: 'DELETE'}
+      show: { method: 'GET', params: {action: 'show'}, isArray: false}
     }
   )
 
-@LoginCtrl = ($scope, User) ->
+app.factory "Users", ($resource) ->
+  $resource("/users",
+  {
+    show: { method: 'GET', isArray: false}
+  }
+  )
+
+@LoginCtrl = ($scope, $rootScope, User) ->
   $scope.users = User.query()
 
   $scope.createAccountFlag = false
@@ -21,6 +28,7 @@ app.factory "User", ($resource) ->
   $scope.createAccount = () ->
     $scope.createAccountFlag = true
     $scope.submitText = 'Sign Up'
+    $scope.infoText = 'Please login or sign up'
 
   $scope.backToLogin = () ->
     $scope.createAccountFlag = false
@@ -46,6 +54,7 @@ app.factory "User", ($resource) ->
           data.$save(
             (data) ->
               console.log(data)
+              window.location.href = '/events#index'
             (error) ->
               console.log(error)
               $scope.infoText = "Fail to Sign Up: Email is taken!"
@@ -54,14 +63,30 @@ app.factory "User", ($resource) ->
           console.log(error)
           $scope.infoText = "Fail to Sign Up: Username is taken!"
       )
-
-
     else
-      user = User.get({username:$scope.username})
-      if user.isUndefined()
-        $scope.infoText = 'User does not exist!'
-      else
-        if $scope.password != user.password
-          $scope.infoText = 'Password does not match our records!'
+      User.show({username:$scope.username}
+        (data) ->
+          console.log(data)
+          unless angular.isUndefined(data.user)
+            if data.user.password == $scope.password
+              $rootScope.username = $scope.username
+              window.location.href = '/events#index'
+            else
+              $scope.infoText = 'Incorrect Password!'
+          else
+            $scope.infoText = 'Username does not exist!'
+#          console.log(data['user']['password'])
+#          console.log(data.user.password)
+        (error) ->
+          console.log(error)
+      )
+
+  $scope.usernameExist = () ->
+    User.show({username:$scope.username}
+      (data) ->
+        if data
+          true
         else
-          $scope.infoText = 'Success'
+          false
+      (error) ->
+    )

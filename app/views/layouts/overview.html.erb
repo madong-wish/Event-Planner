@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="Event">
+<head>
+  <title>Overview</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller="EventCtrl" name="Event" ng-model="Event">
+<div id="overview_header">
+  <input type="text" name="new_event_title" id="new_event" ng-model="new_event_title" placeholder={{generateSampleEvent()}}>
+  <a href="" title="Add Event"><button class="header_button" ng-click="addEvent()"><i class="fa fa-plus fa-5"></i></button></a>
+  <a href="" title="Search Event"><button class="header_button"><i class="fa fa-search fa-5"></i></button></a>
+</div>
+<%= yield %>
+
+</body>
+</html>

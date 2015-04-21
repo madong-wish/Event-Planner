@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #background {
-  background: url("login_page.png") no-repeat fixed center;
+  background: url("tahoe.png") no-repeat fixed center;
   background-size: cover;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@ body {
   margin: 0;
 }
 
-h1 {
+.main_title {
   font-family: "Verdana";
   font-weight: normal;
   font-size: 24pt;
@@ -33,7 +33,7 @@ h1 {
 h4 {
   font-family: "Verdana";
   font-weight: normal;
-  font-size: 14pt;
+  font-size: 12pt;
   color: #7bdb3a;
   text-shadow: 1px 1px 1px darkblue;
   width: auto;

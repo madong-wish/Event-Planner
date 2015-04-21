@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>Event<br>Scheduler
+<h1 class="main_title">Event<br>Scheduler
   <h4>by Manduo</h4><br>
 </h1>
 <div id="background">
@@ -42,7 +42,7 @@
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="#" ng-click="createAccount()">Create an account</a></i></div>
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="" ng-click="resetPassword()">Forgot password</a></i></div>
   <div class="create_account" ng-show="createAccountFlag || passwordReset"><i class="fa fa-angle-double-left"><a href="" ng-click="backToLogin()">Login</a></i></div>
-  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag || (login.email.$invalid && passwordReset)"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
+  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag || (login.email.$invalid && passwordReset) || login.password.$error.required || login.username.$error.required"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
 </form>
 </div>
 </body>

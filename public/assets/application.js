@@ -10759,27 +10759,39 @@ return jQuery;
   app = angular.module("Login", ["ngResource"]);
 
   app.factory("User", function($resource) {
-    return $resource("/users/:id", {
+    return $resource("/users/:action/:id", {
       id: "@id"
     }, {
-      'create': {
+      create: {
         method: 'POST'
       },
-      'index': {
+      index: {
         method: 'GET',
         isArray: true
       },
-      'show': {
-        method: 'GET',
-        isArray: false
-      },
-      'destroy': {
+      destroy: {
         method: 'DELETE'
+      },
+      show: {
+        method: 'GET',
+        params: {
+          action: 'show'
+        },
+        isArray: false
       }
     });
   });
 
-  this.LoginCtrl = function($scope, User) {
+  app.factory("Users", function($resource) {
+    return $resource("/users", {
+      show: {
+        method: 'GET',
+        isArray: false
+      }
+    });
+  });
+
+  this.LoginCtrl = function($scope, $rootScope, User) {
     $scope.users = User.query();
     $scope.createAccountFlag = false;
     $scope.passwordReset = false;
@@ -10787,7 +10799,8 @@ return jQuery;
     $scope.infoText = 'Please login or sign up';
     $scope.createAccount = function() {
       $scope.createAccountFlag = true;
-      return $scope.submitText = 'Sign Up';
+      $scope.submitText = 'Sign Up';
+      return $scope.infoText = 'Please login or sign up';
     };
     $scope.backToLogin = function() {
       $scope.createAccountFlag = false;
@@ -10799,8 +10812,8 @@ return jQuery;
       $scope.passwordReset = true;
       return $scope.infoText = 'Please enter your email to retrieve password';
     };
-    return $scope.submitForm = function() {
-      var newUser, user;
+    $scope.submitForm = function() {
+      var newUser;
       if ($scope.passwordReset) {
         $scope.backToLogin();
         return $scope.infoText = 'An email has been sent to you with password reset link';
@@ -10812,7 +10825,8 @@ return jQuery;
         return newUser.$save(function(data) {
           data.email = $scope.email;
           return data.$save(function(data) {
-            return console.log(data);
+            console.log(data);
+            return window.location.href = '/events#index';
           }, function(error) {
             console.log(error);
             return $scope.infoText = "Fail to Sign Up: Email is taken!";
@@ -10822,19 +10836,56 @@ return jQuery;
           return $scope.infoText = "Fail to Sign Up: Username is taken!";
         });
       } else {
-        user = User.get({
+        return User.show({
           username: $scope.username
-        });
-        if (user.isUndefined()) {
-          return $scope.infoText = 'User does not exist!';
-        } else {
-          if ($scope.password !== user.password) {
-            return $scope.infoText = 'Password does not match our records!';
+        }, function(data) {
+          console.log(data);
+          if (!angular.isUndefined(data.user)) {
+            if (data.user.password === $scope.password) {
+              $rootScope.username = $scope.username;
+              return window.location.href = '/events#index';
+            } else {
+              return $scope.infoText = 'Incorrect Password!';
+            }
           } else {
-            return $scope.infoText = 'Success';
+            return $scope.infoText = 'Username does not exist!';
           }
-        }
+        }, function(error) {
+          return console.log(error);
+        });
       }
+    };
+    return $scope.usernameExist = function() {
+      return User.show({
+        username: $scope.username
+      }, function(data) {
+        if (data) {
+          return true;
+        } else {
+          return false;
+        }
+      }, function(error) {});
+    };
+  };
+
+}).call(this);
+(function() {
+  var app;
+
+  app = angular.module("Event", ["ngResource"]);
+
+  this.EventCtrl = function($scope, $rootScope) {
+    $scope.example_events = ["Crab fishing in Sausalito", "Hike in Dry Creek, Hayward", "Walk in Lands End San Francisco", "Visit Tech Museum in San Jose", "Watch movie in Union Landing"];
+    $scope.add_event_flag = false;
+    $scope.username = $rootScope.username;
+    $scope.addEvent = function() {
+      return $scope.add_event_flag = true;
+    };
+    $scope.cancelEvent = function() {
+      return $scope.add_event_flag = false;
+    };
+    return $scope.generateSampleEvent = function() {
+      return $scope.example_events[Math.floor(Math.random() * 5)];
     };
   };
 
