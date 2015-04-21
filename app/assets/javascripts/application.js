@@ -10,13 +10,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require angular
+//= require angular-resource
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require angular
-//= require angular-resource
-// require angular/lib/angular.min
+//=require angular/lib/angular.min
 
-// require angular/lib/angular-resource.min
-// require angular/lib/angularjs-rails-resource.min
-// require angular/lib/angular-filter.min
+//=require angular/lib/angular-resource.min
+//=require angular/lib/angularjs-rails-resource.min
+//=require angular/lib/angular-filter.min
