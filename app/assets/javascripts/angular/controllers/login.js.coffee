@@ -45,22 +45,23 @@ app.controller(@LoginCtrl = ($scope, User, $document) ->
       $scope.backToLogin()
       $scope.infoText = 'An email has been sent to you with password reset link'
     else if $scope.createAccountFlag
-      newUser = new User({username:$scope.username})
-      newUser.password = $scope.password
-      newUser.$save(
+      User.show({username:$scope.username}
         (data) ->
-          data.email = $scope.email
-          data.$save(
-            (data) ->
-              console.log(data)
-              window.location.href = '/events#index'
-            (error) ->
-              console.log(error)
-              $scope.infoText = "Fail to Sign Up: Email is taken!"
-          )
+          unless angular.isUndefined(data.user)
+            $scope.infoText = "Fail to Sign Up: Username is taken!"
+          else
+            newUser = new User({username:$scope.username})
+            newUser.password = $scope.password
+            newUser.email = $scope.email
+            newUser.$save(
+              (data) ->
+                console.log(data)
+                window.location.href = '/events#index'
+                $document[0].cookie="username=" + $scope.username + "; expires=Session; path=/"
+              (error) ->
+                $scope.infoText = "Fail to Sign Up: Email is taken!")
         (error) ->
           console.log(error)
-          $scope.infoText = "Fail to Sign Up: Username is taken!"
       )
     else
       User.show({username:$scope.username}
