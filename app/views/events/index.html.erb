@@ -4,33 +4,64 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <body>
+<a href="/" id="welcome_user"><i class="fa fa-user"></i> {{username}}</a>
 <a href="/"><button id="logout-submit"><i class="fa fa-sign-out"></i>Sign Out</button></a>
-<h2>Welcome {{username}}</h2>
-<div class="event_container" ng-show="add_event_flag">
-<form class="event_form">
-  <h4 class="event_title">{{new_event_title}}</h4>
-  <div class="">
-     <div class="col-md-6">
-       <p>Date</p>
-       <input type="date" id="event_date">
-     </div>
-     <div class="col-md-6">
-       <p>Time</p>
-       <input type="time" id="event_time">
-     </div>
+<div class="event_container_shadow" ng-show="add_event_flag">
+    <div class="event_container" ng-show="add_event_flag">
+      <form class="event_form">
+      <h4 class="event_title">{{new_event_title}}</h4>
+      <div class="">
+         <div class="col-md-6">
+           <p>Date</p>
+           <input type="date" id="event_date">
+         </div>
+         <div class="col-md-6">
+           <p>Time</p>
+           <input type="time" id="event_time">
+         </div>
+      </div>
+      <div class="col-md-12">
+        <p>Location</p>
+        <input type="text" id="event_location">
+      </div>
+      <br>
+      <div class="col-md-12">
+        <p>Description</p>
+        <textarea id="event_description" type="text"></textarea>
+      </div>
+      <button id="event_cancel" ng-click="cancelEvent()"><i class="fa fa-times"></i>Cancel</button>
+      <button id="event_submit"><i class="fa fa-check"></i>Create</button>
+    </form>
+    </div>
+</div>
+<div class="row event_row" ng-style="{opacity : (add_event_flag && '0.45') || '1'}">
+  <div class="col-xs-4">
+    <div class="event_list_container">TEST LIST</div>
   </div>
-  <div class="col-md-12">
-    <p>Location</p>
-    <input type="text" id="event_location">
+  <div class="col-xs-8">
+    <div class="event_detail_container">
+      <div class="col-xs-9">
+          <h3>Picnic at A Street</h3>
+          <p>Time: Friday, May 23th 10:23 PM</p>
+          <p>Location: 123 A St, Hayward</p>
+          <iframe
+          width="95%"
+          height="400"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD_5DhvoQsEthidNcgVeCE87Cxsp5R8SW0&q=123+A+Street,Hayward+CA">
+          </iframe>
+      </div>
+      <div class="col-xs-3 attendants_panel">
+        <br>
+        <h5>Attendants:</h5>
+      </div>
+      <div style="padding-bottom: 10px; clear: both">
+      </div>
+      <div class="description_box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget sapien at urna volutpat placerat. Vestibulum diam nibh, lacinia quis purus ut, consequat tempor augue. Aliquam varius iaculis dolor, in elementum nibh commodo in. Nam id metus ac mauris mattis tincidunt ac in purus. Curabitur ac varius sem. Sed sed vulputate sem. Nam vestibulum magna lectus, sit amet pretium dui viverra ac. Sed vitae ultricies erat. Curabitur vel magna porttitor, tristique augue vel, suscipit nulla. Aenean lorem elit, pellentesque ac diam sed, vehicula consectetur nibh. Aenean semper elementum turpis, quis lacinia augue ornare at. Nunc sed rhoncus neque. Ut imperdiet vel lorem at gravida. Donec semper lacus id imperdiet posuere. Proin et tellus id sapien scelerisque scelerisque sit amet vitae nisi.
+      </div>
+    </div>
   </div>
-  <br>
-  <div class="col-md-12">
-    <p>Description</p>
-    <textarea id="event_description" type="text"></textarea>
-  </div>
-  <button id="event_cancel" ng-click="cancelEvent()"><i class="fa fa-times"></i>Cancel</button>
-  <button id="event_submit"><i class="fa fa-check"></i>Create</button>
-</form>
 </div>
 <div id="overview_background">
 </div>

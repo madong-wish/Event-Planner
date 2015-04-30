@@ -1,10 +1,13 @@
 app = angular.module("Event", ["ngResource"])
 
 
-@EventCtrl = ($scope, $rootScope) ->
+app.controller(@EventCtrl = ($scope, $document) ->
   $scope.example_events = ["Crab fishing in Sausalito", "Hike in Dry Creek, Hayward", "Walk in Lands End San Francisco", "Visit Tech Museum in San Jose", "Watch movie in Union Landing"]
   $scope.add_event_flag = false
-  $scope.username = $rootScope.username
+  console.log($document[0].cookie)
+  unless angular.isUndefined($document[0].cookie)
+    $scope.username = $document[0].cookie.split('username=')[1].split(';')[0]
+  console.log($scope.username)
 
   $scope.addEvent = () ->
     $scope.add_event_flag = true
@@ -13,4 +16,6 @@ app = angular.module("Event", ["ngResource"])
     $scope.add_event_flag = false
 
   $scope.generateSampleEvent = () ->
-    $scope.example_events[Math.floor(Math.random()*5)]
+    unless $scope.add_event_flag
+      $scope.example_events[Math.floor(Math.random()*5)]
+)

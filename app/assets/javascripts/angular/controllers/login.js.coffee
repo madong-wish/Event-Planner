@@ -10,16 +10,15 @@ app.factory "User", ($resource) ->
     }
   )
 
-app.factory "Users", ($resource) ->
+app.factory "ActiveUser", ($resource) ->
   $resource("/users",
   {
     show: { method: 'GET', isArray: false}
   }
   )
 
-@LoginCtrl = ($scope, $rootScope, User) ->
+app.controller(@LoginCtrl = ($scope, User, $document) ->
   $scope.users = User.query()
-
   $scope.createAccountFlag = false
   $scope.passwordReset = false
   $scope.submitText = 'Submit'
@@ -69,8 +68,11 @@ app.factory "Users", ($resource) ->
           console.log(data)
           unless angular.isUndefined(data.user)
             if data.user.password == $scope.password
-              $rootScope.username = $scope.username
+              #$cookieStore.put('activeUser', $scope.username)
               window.location.href = '/events#index'
+              console.log($document[0].cookie)
+              $document[0].cookie="username=" + $scope.username + "; expires=Session; path=/"
+              console.log($document[0].cookie)
             else
               $scope.infoText = 'Incorrect Password!'
           else
@@ -90,3 +92,4 @@ app.factory "Users", ($resource) ->
           false
       (error) ->
     )
+)

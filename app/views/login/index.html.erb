@@ -42,7 +42,7 @@
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="#" ng-click="createAccount()">Create an account</a></i></div>
   <div class="create_account" ng-hide="createAccountFlag || passwordReset"><i class="fa fa-angle-double-right"><a href="" ng-click="resetPassword()">Forgot password</a></i></div>
   <div class="create_account" ng-show="createAccountFlag || passwordReset"><i class="fa fa-angle-double-left"><a href="" ng-click="backToLogin()">Login</a></i></div>
-  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag || (login.email.$invalid && passwordReset) || login.password.$error.required || login.username.$error.required"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
+  <div class="login_row"><button id="login-submit" value="Login" ng-click=submitForm() ng-disabled="(login.$invalid || password != password2) && createAccountFlag || (login.email.$invalid && passwordReset) || (!passwordReset && login.password.$error.required || login.username.$error.required)"><i class="fa fa-sign-in"></i>{{submitText}}</button></div>
 </form>
 </div>
 </body>

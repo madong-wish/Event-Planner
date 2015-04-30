@@ -28,23 +28,24 @@
 }
 
 #logout-submit {
-  height: 30px;
-  width: 100px;
+  height: 26px;
+  width: 95px;
   background-color: #327bba;
-  font-size: 12pt;
+  font-size: 10pt;
   color: #ffffff;
   text-align: center;
-  display: inline-block;
-  line-height: 25px;
+  line-height: 22px;
   box-sizing: border-box;
   border: 1px solid #0033cc;
   font-family: Tahoma;
-  float: right;
-  margin-right: 1%;
+  margin-top: 5px;
+  margin-right: 10px;
+  float:right;
   align-content: center;
   z-index: 3;
   position: relative;
   cursor: pointer;
+  clear:both;
 }
 
 #logout-submit:hover:enabled {
@@ -57,7 +58,7 @@
   position: relative;
   width: 35%;
   height: 35px;
-  font-size: 18pt;
+  font-size: 14pt;
   margin-top: 30px;
   margin-left: 30%;
   margin-right: auto;
@@ -96,19 +97,54 @@
   margin-left: 2px;
 }
 
+.event_container_shadow {
+  background: none repeat scroll 0% 0% rgba(20, 36, 60, 0.4);
+  overflow: visible;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .event_container {
-  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.55);
-  width: 50%;
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.85);
+  width: 60%;
   padding: 20px 20px 20px 20px;
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: auto;
+  margin-top: 100px;
+  box-shadow: inset 0px 2.5px 0px #8f9ab1;
+  z-index: 100;
+  position: fixed;
+  display: table;
+  overflow: visible;
+  clear: both;
+}
+
+.event_list_container {
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.7);
+  padding: 20px 20px 20px 20px;
+  margin-top: 45px;
+  margin-left: 10%;
+  box-shadow: inset 0px 2.5px 0px #8f9ab1;
+  z-index: 0;
+  position: relative;
+  clear: both;
+  min-height: 1000px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.event_detail_container {
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.7);
+  padding: 20px 20px 20px 20px;
   margin-top: 45px;
   box-shadow: inset 0px 2.5px 0px #8f9ab1;
   z-index: 0;
   position: relative;
-  display: table;
-  overflow: visible;
   clear: both;
+  min-height: 600px;
 }
 
 #event_description {
@@ -173,11 +209,46 @@
 .event_title {
   font-family: "Verdana";
   font-weight: normal;
-  font-size: 24pt;
+  font-size: 18pt;
   color: white;
   text-shadow: 1px 1px 1px darkblue;
   width: 100%;
   text-align: left;
   margin: auto;
   padding-bottom: 20px;
+}
+
+#welcome_user {
+  font-family: "Verdana";
+  font-weight: normal;
+  font-size: 10pt;
+  color: #96e0ff;
+  text-shadow: 0.5px 0.5px 0.5px darkblue;
+  text-align: left;
+  margin-top: 2px;
+  margin-right: 2px;
+  float: right;
+  position: relative;
+  z-index: 3;
+  clear:both;
+}
+
+.event_row {
+  float: left;
+  width: 100%;
+}
+
+.attendants_panel {
+  border-left: thin solid #34c6d6;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.description_box {
+  border: thin solid #34c6d6;
+  width: 100%;
+  padding: 10px;
+  min-height: 40px;
+  position: relative;
+  clear: both;
 }
