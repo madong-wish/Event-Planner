@@ -48,7 +48,7 @@ GEM
       sprockets (~> 2)
       tilt
     arel (3.0.3)
-    bootstrap-sass-rails (3.0.0.3)
+    bootstrap-sass-rails (3.0.2.1)
       railties (>= 3.1.0)
       sass-rails (>= 3.1.0)
     bower-rails (0.9.2)
@@ -129,7 +129,7 @@ PLATFORMS
 DEPENDENCIES
   angular-rails
   angular-rails-templates
-  bootstrap-sass-rails (~> 3.0.0.3)
+  bootstrap-sass-rails (~> 3.0.2.1)
   bower-rails
   coffee-rails (~> 3.2.1)
   font-awesome-sass
