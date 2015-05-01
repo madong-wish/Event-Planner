@@ -14,7 +14,7 @@ gem 'rails', '3.2.17'
   gem 'font-awesome-sass'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass-rails', '~> 3.0.2.1'
+  gem 'bootstrap-sass-rails', '~> 3.0.2.1', :require => 'bootstrap-rails'
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 
