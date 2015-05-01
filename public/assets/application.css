@@ -2936,7 +2936,7 @@ body {
 }
 
 /* line 33, ../../app/assets/stylesheets/login.css.scss */
-h4 {
+.author {
   font-family: "Verdana";
   font-weight: normal;
   font-size: 12pt;
@@ -3043,27 +3043,28 @@ h4 {
 }
 
 /* line 130, ../../app/assets/stylesheets/login.css.scss */
-.fa {
+.fa-angle-double-right, .fa-angle-double-left {
+  color: skyblue;
   margin-right: 5px;
 }
 
-/* line 135, ../../app/assets/stylesheets/login.css.scss */
-.fa-angle-double-right, .fa-angle-double-left {
-  color: skyblue;
+/* line 136, ../../app/assets/stylesheets/login.css.scss */
+.fa-sign-in {
+  margin-right: 5px;
 }
 
-/* line 140, ../../app/assets/stylesheets/login.css.scss */
+/* line 141, ../../app/assets/stylesheets/login.css.scss */
 a:link, a:visited {
   color: #D2D2D2;
   text-decoration: none;
 }
 
-/* line 145, ../../app/assets/stylesheets/login.css.scss */
+/* line 146, ../../app/assets/stylesheets/login.css.scss */
 a:hover {
   color: lightskyblue;
 }
 
-/* line 149, ../../app/assets/stylesheets/login.css.scss */
+/* line 150, ../../app/assets/stylesheets/login.css.scss */
 hr {
   border-color: skyblue;
   margin-bottom: 10px;
@@ -3071,14 +3072,14 @@ hr {
   margin-right: 10px;
 }
 
-/* line 156, ../../app/assets/stylesheets/login.css.scss */
+/* line 157, ../../app/assets/stylesheets/login.css.scss */
 small {
   color: #ff5600;
   margin-left: 1%;
   font-weight: bold;
 }
 
-/* line 162, ../../app/assets/stylesheets/login.css.scss */
+/* line 163, ../../app/assets/stylesheets/login.css.scss */
 #login-submit:disabled {
   background-color: #D2D2D2;
   color: #ffffff;
@@ -3231,18 +3232,19 @@ small {
 /* line 139, ../../app/assets/stylesheets/overview.css.scss */
 .event_list_item {
   background: none repeat scroll 0% 0% rgba(190, 219, 223, 0.7);
-  padding: 5px;
+  padding: 10px;
+  cursor: pointer;
   width: 100%;
 }
 
-/* line 145, ../../app/assets/stylesheets/overview.css.scss */
+/* line 146, ../../app/assets/stylesheets/overview.css.scss */
 .event_list_item:hover {
   background: none repeat scroll 0% 0% rgba(155, 211, 240, 0.7);
-  padding: 5px;
+  padding: 10px;
   width: 100%;
 }
 
-/* line 151, ../../app/assets/stylesheets/overview.css.scss */
+/* line 152, ../../app/assets/stylesheets/overview.css.scss */
 .event_detail_container {
   background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.7);
   padding: 20px 20px 20px 20px;
@@ -3254,7 +3256,7 @@ small {
   min-height: 600px;
 }
 
-/* line 162, ../../app/assets/stylesheets/overview.css.scss */
+/* line 163, ../../app/assets/stylesheets/overview.css.scss */
 #event_description {
   width: 100%;
   height: 200px;
@@ -3264,25 +3266,25 @@ small {
   margin-right: auto;
 }
 
-/* line 171, ../../app/assets/stylesheets/overview.css.scss */
+/* line 172, ../../app/assets/stylesheets/overview.css.scss */
 #event_location {
   width: 100%;
   margin-bottom: 10px;
   line-height: 30px;
 }
 
-/* line 177, ../../app/assets/stylesheets/overview.css.scss */
+/* line 178, ../../app/assets/stylesheets/overview.css.scss */
 #event_time, #event_date {
   width: 100%;
   margin-bottom: 10px;
 }
 
-/* line 182, ../../app/assets/stylesheets/overview.css.scss */
+/* line 183, ../../app/assets/stylesheets/overview.css.scss */
 .p {
   font-family: "tahoma";
 }
 
-/* line 186, ../../app/assets/stylesheets/overview.css.scss */
+/* line 187, ../../app/assets/stylesheets/overview.css.scss */
 #event_cancel {
   float: right;
   margin-top: 10px;
@@ -3295,7 +3297,7 @@ small {
   color: #ffffff;
 }
 
-/* line 198, ../../app/assets/stylesheets/overview.css.scss */
+/* line 199, ../../app/assets/stylesheets/overview.css.scss */
 #event_submit {
   float: right;
   margin-top: 10px;
@@ -3307,40 +3309,40 @@ small {
   color: #ffffff;
 }
 
-/* line 209, ../../app/assets/stylesheets/overview.css.scss */
+/* line 210, ../../app/assets/stylesheets/overview.css.scss */
 #event_cancel:hover:enabled {
   background-color: #eb2259;
   color: #fdffe2;
   border-color: 1px solid #801c2c;
 }
 
-/* line 215, ../../app/assets/stylesheets/overview.css.scss */
+/* line 216, ../../app/assets/stylesheets/overview.css.scss */
 #event_submit:hover:enabled {
   background-color: #47e084;
   color: #fdffe2;
   border-color: 1px solid #20805a;
 }
 
-/* line 221, ../../app/assets/stylesheets/overview.css.scss */
+/* line 222, ../../app/assets/stylesheets/overview.css.scss */
 .event_title {
   font-family: "Verdana";
-  font-weight: normal;
+  font-weight: thin;
   font-size: 18pt;
-  color: white;
-  text-shadow: 1px 1px 1px darkblue;
+  color: #e8f4f6;
+  text-shadow: 1px 1px 1px #36608b;
   width: 100%;
   text-align: left;
   margin: auto;
   padding-bottom: 20px;
 }
 
-/* line 233, ../../app/assets/stylesheets/overview.css.scss */
+/* line 234, ../../app/assets/stylesheets/overview.css.scss */
 #welcome_user {
   font-family: "Verdana";
   font-weight: normal;
   font-size: 10pt;
   color: #96e0ff;
-  text-shadow: 0.5px 0.5px 0.5px darkblue;
+  text-shadow: 0.5px 0.5px 0.5px #000078;
   text-align: left;
   margin-top: 2px;
   margin-right: 2px;
@@ -3350,20 +3352,20 @@ small {
   clear: both;
 }
 
-/* line 248, ../../app/assets/stylesheets/overview.css.scss */
+/* line 249, ../../app/assets/stylesheets/overview.css.scss */
 .event_row {
   float: left;
   width: 100%;
 }
 
-/* line 253, ../../app/assets/stylesheets/overview.css.scss */
+/* line 254, ../../app/assets/stylesheets/overview.css.scss */
 .attendants_panel {
   border-left: thin solid #34c6d6;
   height: 100%;
   padding-left: 10px;
 }
 
-/* line 259, ../../app/assets/stylesheets/overview.css.scss */
+/* line 260, ../../app/assets/stylesheets/overview.css.scss */
 .description_box {
   border: thin solid #34c6d6;
   width: 100%;
@@ -3371,4 +3373,33 @@ small {
   min-height: 40px;
   position: relative;
   clear: both;
+}
+
+/* line 269, ../../app/assets/stylesheets/overview.css.scss */
+.rsvp_button {
+  width: 47px;
+  height: 47px;
+  border: none;
+  background: none repeat scroll 0% 0% rgba(190, 219, 223, 0.1);
+  margin-left: -50px;
+  position: absolute;
+  margin-top: 20px;
+}
+
+/* line 279, ../../app/assets/stylesheets/overview.css.scss */
+.fa-plus-circle {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  position: relative;
+  color: #2ba46b;
+}
+
+/* line 287, ../../app/assets/stylesheets/overview.css.scss */
+.fa-times {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #c71b18;
+  padding: 0px;
 }

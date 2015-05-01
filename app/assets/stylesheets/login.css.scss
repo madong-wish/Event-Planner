@@ -30,7 +30,7 @@ body {
   margin: 2% auto 2% 2%;
 }
 
-h4 {
+.author {
   font-family: "Verdana";
   font-weight: normal;
   font-size: 12pt;
@@ -127,14 +127,15 @@ h4 {
   border-color: green;
 }
 
-.fa
-{
-  margin-right: 5px;
-}
-
 .fa-angle-double-right, .fa-angle-double-left
 {
   color: skyblue;
+  margin-right: 5px;
+}
+
+.fa-sign-in
+{
+  margin-right: 5px;
 }
 
 a:link, a:visited {
@@ -162,5 +163,5 @@ small {
 #login-submit:disabled {
   background-color: #D2D2D2;
   color: #ffffff;
-  border-color: gray  ;
+  border-color: gray;
 }
